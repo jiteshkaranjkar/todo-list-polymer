@@ -5,14 +5,6 @@ import "@polymer/paper-button/paper-button.js";
 import "@polymer/polymer/lib/utils/gestures.js";
 import "@polymer/polymer/lib/elements/dom-repeat.js";
 
-/**
- * `todo-list`
- * Todo List Web Component
- *
- * @customElement
- * @polymer
- * @demo demo/index.html
- */
 class TodoList extends PolymerElement {
   static get template() {
     return html`
@@ -109,5 +101,4 @@ class TodoList extends PolymerElement {
     return task.completed;
   }
 }
-
 window.customElements.define("todo-list", TodoList);
