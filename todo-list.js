@@ -20,7 +20,8 @@ class TodoList extends PolymerElement {
           display:input-block
         }
       </style>
-      <h2>This is [[prop1]] to be completed</h2>
+      <h2>[[name]]</h2>
+      <h2>Incomplete [[prop1]]</h2>
       <template
         is="dom-repeat"
         items="{{tasks}}"
@@ -46,6 +47,8 @@ class TodoList extends PolymerElement {
       <paper-button on-click="addTask" raised>Add</paper-button>
       <paper-button on-click="resetTask" raised>Reset</paper-button>
 
+      <h2>Completed [[prop1]]</h2>
+
       <template
         is="dom-repeat"
         items="{{tasks}}"
@@ -70,6 +73,10 @@ class TodoList extends PolymerElement {
   static get properties() {
     return {
       prop1: {
+        type: String,
+        value: "Todo List"
+      },
+      name: {
         type: String,
         value: "Todo List"
       },
